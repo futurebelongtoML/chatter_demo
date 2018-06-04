@@ -1,4 +1,4 @@
-from chatterbot import ChatBot
+from chatterbot import ChatBot, comparisons
 import jieba
 
 # Create a new chat bot named Xiaomi
@@ -10,7 +10,7 @@ chatbot = ChatBot('Xiaomi',
     logic_adapters=[
         {
             "import_path": "chatterbot.logic.BestMatch",
-            "statement_comparison_function": "chatterbot.comparisons.levenshtein_distance",
+            "statement_comparison_function": "chatterbot.comparisons.jaccard_similarity",
             "response_selection_method": "chatterbot.response_selection.get_first_response"
         }
     ])
@@ -27,6 +27,8 @@ while True:
         # is not used by the TerminalAdapter
         question = input("question: ")
         response = chatbot.get_response(" ".join(jieba.cut(question)))
+        response = chatbot.get_response(" ".join(jieba.cut(question)))
+        
         #print(" ".join(jieba.cut(question)))
         print('response: ', response)
     # Press ctrl-c or ctrl-d on the keyboard to exit
