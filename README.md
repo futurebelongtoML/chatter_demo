@@ -28,4 +28,4 @@ main.py文件 定义了一个新的ListTrainer，可以支持process后的数据
 
 事例：
 
-![屏幕快照 2018-06-04 下午5.53.02](/Users/mac/Desktop/屏幕快照 2018-06-04 下午5.53.02.png)
+![](https://ws2.sinaimg.cn/large/006tNc79ly1frzar4leiej30hf06n403.jpg)
